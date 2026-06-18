@@ -38,6 +38,7 @@ export default function Feelings() {
 
   const [current, setCurrent] = useState(0);
   const [started, setStarted] = useState(false);
+  const [hearts, setHearts] = useState(false);
 
   const handleClick = () => {
     if (!started) {
@@ -48,6 +49,10 @@ export default function Feelings() {
     if (current < feelings.length - 1) {
       setCurrent(current + 1);
     }
+    if(current===1)
+    {
+      setHearts(true);
+    }
   };
 
   const finished =
@@ -55,7 +60,7 @@ export default function Feelings() {
 
   return (
     <div className="feelings-container">
-      <div className="hearts">
+      {hearts && <div className="hearts">
         <span>❤️</span>
         <span>💕</span>
         <span>💖</span>
@@ -64,7 +69,7 @@ export default function Feelings() {
         <span>💞</span>
         <span>❤️</span>
         <span>💕</span>
-      </div>
+      </div>}
       <div className="feelings-card">
         <h1>What I Feel About You ❤️</h1>
 
