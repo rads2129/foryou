@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #ffe4e9,
+    #ffd6e0
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 25px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(255, 111, 146, 0.2);
+  animation: fadeIn 1s ease;
+}
+
+.title {
+  font-family: "papyrus", fantasy;
+  font-size: 2.5rem;
+  color: #fb6f92;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.couple-image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #ffb3c6;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease;
+}
+
+.couple-image:hover {
+  transform: scale(1.05);
+}
+
+.enter-btn {
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #fb6f92;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enter-btn:hover {
+  background: #ff4d79;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(251, 111, 146, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+  .home-card {
+    padding: 25px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .couple-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}

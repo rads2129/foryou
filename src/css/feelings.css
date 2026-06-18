@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@700&display=swap');
+
+.feelings-container {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #ffe4e9,
+    #ffd6e0
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.feelings-card {
+  background: rgba(255,255,255,0.92);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(251,111,146,0.2);
+}
+
+.feelings-card h1 {
+  font-family: "Lucida Handwriting", cursive;
+  color: #fb6f92;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.feeling-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #ffb3c6;
+  margin-bottom: 20px;
+}
+
+.feeling-quote {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+}
+
+.love-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 40px;
+  background: #fb6f92;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.love-btn:hover {
+  background: #ff4d79;
+  transform: translateY(-3px);
+}
+
+.final-message {
+  margin-top: 20px;
+}
+
+.final-message h2 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.final-message p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.love-text {
+  font-size: 4rem;
+  color: #fb6f92;
+  margin-top: 20px;
+  animation: heartbeat 5s infinite;
+  text-shadow:
+    0 0 10px #ffb3c6,
+    0 0 20px #ff8fab,
+    0 0 30px #fb6f92;
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 2rem;
+  animation: floatHeart linear infinite;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.hearts span:nth-child(2) {
+  left: 20%;
+  animation-duration: 10s;
+}
+
+.hearts span:nth-child(3) {
+  left: 35%;
+  animation-duration: 7s;
+}
+
+.hearts span:nth-child(4) {
+  left: 50%;
+  animation-duration: 12s;
+}
+
+.hearts span:nth-child(5) {
+  left: 65%;
+  animation-duration: 9s;
+}
+
+.hearts span:nth-child(6) {
+  left: 75%;
+  animation-duration: 11s;
+}
+
+.hearts span:nth-child(7) {
+  left: 85%;
+  animation-duration: 8s;
+}
+
+.hearts span:nth-child(8) {
+  left: 95%;
+  animation-duration: 13s;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.08);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .feeling-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .feelings-card h1 {
+    font-size: 2.2rem;
+  }
+}
